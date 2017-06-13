@@ -1,7 +1,12 @@
 package com.kris.java8.streams;
 
-/**
- * Created by WS33 on 6/9/2017.
- */
+import com.kris.collectionsLearning.MockCollections;
+import com.kris.collectionsLearning.Product;
+
+import java.util.List;
+
 public class BasicStream {
+    public static void main(String[] args) {
+        List<Product> productList = MockCollections.getMockList();
+    }
 }
