@@ -1,23 +1,26 @@
 package com.kris.misc;
 
-public final class ImmutableClassTest {
-    int a;
-
-    public ImmutableClassTest(int a) {
-        this.a = a;
-    }
-
-    public ImmutableClassTest() {
-    }
-
+public class ImmutableClassTest {
     public static void main(String[] args) {
-        ImmutableClassTest test = new ImmutableClassTest(20);
-        System.out.println("before : " + test);
-        test.setA(10);
-        System.out.println("after : " + test);
+        ImmutableClass test = new ImmutableClass(20);
+        System.out.println("before : " + test.getTestVariable());
+        test.setTestVariable(10);
+        System.out.println("after : " + test.getTestVariable());
+    }
+}
+
+final class ImmutableClass {
+    int testVariable;
+
+    public ImmutableClass(int testVariable) {
+        this.testVariable = testVariable;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public int getTestVariable() {
+        return testVariable;
+    }
+
+    public void setTestVariable(int testVariable) {
+        this.testVariable = testVariable;
     }
 }
