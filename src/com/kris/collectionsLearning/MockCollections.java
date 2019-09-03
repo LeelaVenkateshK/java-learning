@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class MockCollections {
     public static List<Product> getMockList() {
-        List<Product> products = new ArrayList();
+        List<Product> products = new ArrayList<>();
         products.add(new Product("Banana Cake", 2));
         products.add(new Product("Fruit Cake", 5));
         products.add(new Product("Apple Cake", 10));

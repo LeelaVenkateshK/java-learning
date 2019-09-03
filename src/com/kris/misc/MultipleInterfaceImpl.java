@@ -1,14 +1,14 @@
 package com.kris.misc;
 
 public class MultipleInterfaceImpl
-        extends AbstractClassExample implements TestInterfaceOne, TestInterfaceTwo {
-    public int getTestValue() {
-        return 1;
-    }
+        extends AbstractClassExample /* implements TestInterfaceOne, TestInterfaceTwo  */{
+    // public int getTestValue() {
+    //     return 1;
+    // }
 
-    public long getTestValue() {
-        return 1L;
-    }
+    // public long getTestValue() {
+    //     return 1L;
+    // }
 
     public double getTestValue() {
         return 1.0;
@@ -17,6 +17,8 @@ public class MultipleInterfaceImpl
     public static void main(String[] args) {
         System.out.println("Testing");
         MultipleInterfaceImpl test = new MultipleInterfaceImpl();
+        double out = test.getTestValue();
+        System.out.println(out);
     }
 }
 
